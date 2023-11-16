@@ -14,14 +14,24 @@
   /* height: 100vh; */
 }
 
-
 .content {
-  display: flex;
   flex: 1;
-  padding: 20px;
+  display: flex;
+  justify-content: space-between; /* Ensure the groceries and cart divs stretch to fill the available space */
+  gap: 40px; /* Add gap between groceries and cart */
 }
 
-.box {
+.groceries {
+  flex: 1;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 20px;
+  overflow-y: auto;
+}
+
+
+.cart {
   flex: 1;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -33,4 +43,14 @@
 .box-header {
   font-weight: bold;
   margin-bottom: 10px;
+}
+
+.grocery-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.grocery-item {
+  width: calc(33% - 5px); /* Set width for each grocery item to 50% minus the gap */
 }
