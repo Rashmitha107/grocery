@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="content">
+      <div class="box groceries">
+        <div class="box-header">Groceries</div>
+        <div *ngFor="let item of groceryItems">
+          <app-product [product]="item" (addToCart)="addToCart($event)"></app-product>
+        </div>
+      </div>
+      <div class="box cart">
+        <div class="box-header">Shopping Cart</div>
+        <app-cart [cartItems]="cartItems"></app-cart>
+      </div>
+    </div>
+  </div>
+
